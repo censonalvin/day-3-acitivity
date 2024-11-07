@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+:root {
+    color: #333;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 10px;
+    font-size: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    max-height: 100px;
+    max-width: 100px;
+}
+.cart-search-heart-icons {
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.hero {
+    background-image: url("../image/main_img.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 960px 720px;
+    padding: 150px 80px;
+    margin-right: -20px;
+}
+.hero-header {
+    font-size: 65px;
+    font-weight: bold;
+}
+.colored-text {
+    color: #ff9800;
+}
+.order-btn {
+    color: white;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order-btn:hover {
+    background-color: #e68900;
+}
+.about-us {
+    display: flex;
+    padding: 200px 50px;
+}
+.food-plate-img {
+    max-height: 720px;
+    max-width: 1080px;
+}
+.text-50 {
+    font-size: 50px;
+    font-weight: bold;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    padding: 10px 70px;
+}
+
+.menu-card {
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.5);
+    text-align: center; 
+    font-size: 24px;
+}
+.menu-card p {
+    font-size: 16px;
+}
+.menu-card img {
+    width: 100%;
+    height: 320px;
+    border-radius: 2.5px;
+}
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: row;
+}
+.star {
+    font-size: 2rem;
+    color: gray;
+    position: relative;
+}
+.star::before {
+    content: '\2605'; /* Unicode for filled star */
+    color: gold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.half::before {
+    width: 50%; /* Show only half of the star */
+}
+.menu-order {
+    background-color: #333;
+    color: #eee;
+    padding: 10px 100px;
+    cursor: pointer;
+}
+.menu-order:hover {
+    background-color: #808080;
+}
+.gallary-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 70px;
+}
+.gallary-img img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+.gallary-img img:hover {
+    transform: translateY(-10px);
+}
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.reviews-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.reviews-card {
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px 35px;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.5);
+    transition: transform 0.3s;
+}
+.reviews-card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+.hero-heading {
+    width: 30%;
+    margin-left: 50px;
+}
+.hero-paragraph {
+    width: 55%; 
+    margin-top: 50px;
+    padding-left: 100px; 
+    margin-left: 50px; 
+    font-weight: 550;
+}
+.hero-btn {
+    width: 30%; 
+    margin-top: 50px;
+    padding-left: 100px; 
+    margin-left: 50px;
+}
+@media (max-width: 1080px) {
+    .hero {
+        padding: 100px 20px;
+        text-align: center;
+        background-position: center;
+        background-image: none;
+    }
+    .hero-header {
+        font-size: 50px;
+    }
+    .hero-btn {
+        display: contents;
+        padding: 0;
+    }
+    .hero-paragraph {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+    .hero-heading {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .about-us {
+        flex-direction: column;
+        padding: 100px 20px;
+    }
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
